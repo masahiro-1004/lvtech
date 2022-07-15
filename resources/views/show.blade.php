@@ -9,16 +9,13 @@
     </head>
     <body>
         <h1>Blog Name</h1>
-        <div class='posts'>
-            @foreach($posts as $post)
-                <div class='post'>
-                    <a href='/posts/{{$post ->id}}'><h2 class='title'>{{ $post->title }}</h2></a>
-                    <p class='body'> {{ $post ->body}}</p>
-                </div>
-            @endforeach
+        <div class='post'>
+             <h2 class='title'>{{ $post->title }}</h2>
+             <p class='body'> {{ $post ->body}}</p>
+             <p clas='updated_at'>{{ $post->updated_at}}</p>
         </div>
-        <div class='paginate'>
-            {{ $posts->links() }}
-        </div>
+        <div class='back'>[<a href='/'>back</a>]</div>
+        
+     
     </body>
 </html>
